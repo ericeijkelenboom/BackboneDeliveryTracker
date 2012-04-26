@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Web API</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>
+        <h1>Delivery Tracker</h1>
+    </header>
+
+    <section>
+        <h3>Deliveries</h3>
+        <ul id="deliveryList"></ul>
+    </section>
+
+    <section>
+        <h3>Deliveries by customer</h3>
+        <ul id="deliveryByCustomerList"></ul>
+    </section>
+
+    <footer></footer>
+
+    <!-- Templates -->
+    <script type="text/template" id="tplWineListItem">
+        <strong><%= Description %></strong>, <%= Customer.Name %>, <em><%= Customer.Address %></em>
+    </script>
+
+    <!-- Scripts -->
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/underscore.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/backbone.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DeliveryTracker/Router.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DeliveryTracker/Main.js")" type="text/javascript"></script>
+</body>
+</html>
